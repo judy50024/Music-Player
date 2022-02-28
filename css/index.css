@@ -1,0 +1,64 @@
+@import url("../css/reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: 800;
+  color: white;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(#41CCCC), to(#292929));
+  background: linear-gradient(180deg, #41CCCC 0%, #292929 100%);
+}
+
+nav {
+  height: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem;
+}
+
+nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+nav ul li.nav-search {
+  border: solid 1px white;
+  border-radius: 30px;
+  width: 20%;
+  padding: .4em;
+}
+
+nav #logo {
+  min-width: 200px;
+  width: 100%;
+}
+/*# sourceMappingURL=index.css.map */
