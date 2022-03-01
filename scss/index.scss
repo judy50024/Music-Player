@@ -54,14 +54,49 @@ nav{
 
 }
 
+.grid-container{
+    border: solid 1px red;
+    display: block;
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 1200px;
+}
+
+#artist{
+    padding: 1rem;
+}
+
+
 // now playing bar
 .playing{
     border: solid 1px black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.2);
+    /* glass-small */
+
+    box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(88px);
+    border-radius: 18px;
 }
 
 // song item
 .song-item{
     border: solid 1px blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+    width: 40%;
 }
 
 // bottom playing bar
