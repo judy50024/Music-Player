@@ -20,7 +20,7 @@
                 </a>
             </li>
             <li class="nav-search"> 
-                <img class="nav-search icon-search" src="./images/icons/search.png" alt="search"> 
+                <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search"> 
                 Search
             </li>
         </ul>
@@ -34,10 +34,12 @@
 
     <!-- now playing item -->
     <div class="playing">
-        <span>
-            <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-            <img src="./images/icons/play-circle.png" alt="play-circle">
-        </span>
+        <div class="container">
+            <div class="now-playing-cover">
+                <img src="./images/icons/play-circle.svg" alt="play-circle">
+                <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+            </div>
+        </div>
         <p class="playing-title">Heat Waves</p>
         <p class="playing-time">3:58</p>
     </div>
@@ -55,20 +57,23 @@
 <div class="playing-bar">
 
     <div class="playing-bar-widget">
-        <img src="./images/icons/play-back.png" alt="play-back">
-        <img src="./images/icons/play-circle.png" alt="play-circle">
-        <img src="./images/icons/play-forward.png" alt="play-forward">
+        <img src="./images/icons/skip-back.svg" alt="play-back">
+        <img src="./images/icons/play-circle.svg" alt="play-circle">
+        <img src="./images/icons/skip-forward.svg" alt="play-forward">
     </div>
+    <span class="line" ></span>
 
-    <div class="playing-bar-progress">
-        <span></span>
-        <span></span>
-    </div>
+    <!-- <div class="playing-bar-progress">
+        <span class="line"></span>
+    </div> -->
 
     <div class="now-playing">
         <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="now-playing-artist">Glass Animals</p>
-        <p class="now-playing-song">Heat Waves</p>
+        <span>
+            <p class="now-playing-artist">Glass Animals</p>
+            <p class="now-playing-song">Heat Waves</p>
+        </span>
+
     </div>
 
 </div>
