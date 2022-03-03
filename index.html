@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    
     <title>Soundly</title>
 </head>
 <body>
@@ -19,18 +20,20 @@
                 <img id="logo" src="./images/logo.svg" alt="Soundly-logo">
                 </a>
             </li>
-            <li class="nav-search"> 
+            <li class="nav-search" id="search"> 
                 <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search"> 
-                Search
+                <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" value="Search">
             </li>
         </ul>
     </nav>
 </header>
 
+
+<div id="artist" class="title">
+    <h1>Glass Animals</h1>
+</div>
+
 <div class="grid-container">
-    <div id="artist" class="title">
-        <h1>Glass Animals</h1>
-    </div>
 
     <!-- now playing item -->
     <div class="playing">
@@ -51,6 +54,36 @@
         <p class="item-time">3:58</p>
     </div>
 
+    <div class="song-item">
+        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+        <p class="item-title">Heat Waves</p>
+        <p class="item-time">3:58</p>
+    </div>
+
+    <div class="song-item">
+        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+        <p class="item-title">Heat Waves</p>
+        <p class="item-time">3:58</p>
+    </div>
+
+    <div class="song-item">
+        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+        <p class="item-title">Heat Waves</p>
+        <p class="item-time">3:58</p>
+    </div>
+
+    <div class="song-item">
+        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+        <p class="item-title">Heat Waves</p>
+        <p class="item-time">3:58</p>
+    </div>
+
+    <div class="song-item">
+        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+        <p class="item-title">Heat Waves</p>
+        <p class="item-time">3:58</p>
+    </div>
+
 </div>
 
 <!-- bottom playing bar -->
@@ -61,11 +94,14 @@
         <img src="./images/icons/play-circle.svg" alt="play-circle">
         <img src="./images/icons/skip-forward.svg" alt="play-forward">
     </div>
-    <span class="line" ></span>
 
-    <!-- <div class="playing-bar-progress">
+    <div class="playing-progress">
+
+        <p>1:00</p>
         <span class="line"></span>
-    </div> -->
+        <p>1:00</p>
+
+    </div>
 
     <div class="now-playing">
         <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
@@ -77,6 +113,12 @@
     </div>
 
 </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 
 </body>
 </html>
