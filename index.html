@@ -10,114 +10,91 @@
 </head>
 <body>
 
-<!-- header -->
-<header>
-    <!-- navbar -->
-    <nav>
+<div id="player">
+    <!-- header -->
+    <header>
+        <!-- navbar -->
+        <nav>
+            <ul>
+                <li class="nav-logo">
+                    <a href="index.html">
+                    <img id="logo" src="./images/logo.svg" alt="Soundly-logo">
+                    </a>
+                </li>
+                <li class="nav-search" id="search"> 
+                    <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search"> 
+                    <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" value="Search">
+                    
+                </li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <div id="artist" class="title">
+        <h1>Glass Animals</h1>
+    </div>
+
+    <div class="grid-container">
+
+        <!-- now playing item -->
+        <div class="playing">
+            <div class="container">
+                <div class="now-playing-cover">
+                    <img src="./images/icons/play-circle.svg" alt="play-circle">
+                    <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+                </div>
+            </div>
+            <p class="playing-title">Heat Waves</p>
+            <p class="playing-time">3:58</p>
+        </div>
+
         <ul>
-            <li class="nav-logo">
-                <a href="index.html">
-                <img id="logo" src="./images/logo.svg" alt="Soundly-logo">
-                </a>
-            </li>
-            <li class="nav-search" id="search"> 
-                <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search"> 
-                <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" value="Search">
+            <!-- song item -->
+            <li v-for="item in musicList" class="song-item">
+                <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+                <p class="item-title"> {{item.name}}</p>
+                <p class="item-time">3:58</p>
             </li>
         </ul>
-    </nav>
-</header>
 
 
-<div id="artist" class="title">
-    <h1>Glass Animals</h1>
-</div>
+    </div>
 
-<div class="grid-container">
+    <!-- bottom playing bar -->
+    <div class="playing-bar">
 
-    <!-- now playing item -->
-    <div class="playing">
-        <div class="container">
-            <div class="now-playing-cover">
-                <img src="./images/icons/play-circle.svg" alt="play-circle">
-                <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-            </div>
+        <div class="playing-bar-widget">
+            <img src="./images/icons/skip-back.svg" alt="play-back">
+            <img src="./images/icons/play-circle.svg" alt="play-circle">
+            <img src="./images/icons/skip-forward.svg" alt="play-forward">
         </div>
-        <p class="playing-title">Heat Waves</p>
-        <p class="playing-time">3:58</p>
-    </div>
 
-    <!-- song item -->
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
-    </div>
+        <div class="playing-progress">
 
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
-    </div>
+            <p>1:00</p>
+            <span class="line"></span>
+            <p>1:00</p>
 
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
-    </div>
+        </div>
 
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
-    </div>
+        <div class="now-playing">
+            <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
+            <span>
+                <p class="now-playing-artist">Glass Animals</p>
+                <p class="now-playing-song">Heat Waves</p>
+            </span>
 
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
-    </div>
+        </div>
 
-    <div class="song-item">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <p class="item-title">Heat Waves</p>
-        <p class="item-time">3:58</p>
     </div>
-
 </div>
-
-<!-- bottom playing bar -->
-<div class="playing-bar">
-
-    <div class="playing-bar-widget">
-        <img src="./images/icons/skip-back.svg" alt="play-back">
-        <img src="./images/icons/play-circle.svg" alt="play-circle">
-        <img src="./images/icons/skip-forward.svg" alt="play-forward">
-    </div>
-
-    <div class="playing-progress">
-
-        <p>1:00</p>
-        <span class="line"></span>
-        <p>1:00</p>
-
-    </div>
-
-    <div class="now-playing">
-        <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-        <span>
-            <p class="now-playing-artist">Glass Animals</p>
-            <p class="now-playing-song">Heat Waves</p>
-        </span>
-
-    </div>
-
-</div>
-
 
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./js/main.js"></script>
+
 
 
 </body>
