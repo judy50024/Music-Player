@@ -22,21 +22,20 @@
                     </a>
                 </li>
                 <li class="nav-search" id="search"> 
-                    <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search"> 
-                    <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" value="Search">
-                    
+                    <!-- <img class="nav-search icon-search" src="./images/icons/search.svg" alt="search">  -->
+                    <input type="text" autocomplete="off" v-model="query" @keyup.enter="searchMusic" placeholder="Search...">
                 </li>
             </ul>
 
         </nav>
     </header>
 
-    <div id="artist" class="title">
-        <h1>Glass Animals</h1>
-    </div>
 
     <div class="grid-container">
-
+    
+        <div id="artist" class="title">
+            <h1>Glass Animals</h1>
+        </div>
         <!-- now playing item -->
         <div class="playing">
             <div class="container">
@@ -45,21 +44,23 @@
                     <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
                 </div>
             </div>
-            <p class="playing-title">Heat Waves</p>
-            <p class="playing-time">3:58</p>
+            <p class="playing-title">title</p>
+            <p class="playing-time">tiem</p>
         </div>
 
-        <ul>
-            <!-- song item -->
+
+        <ul class="song-list">
             <li v-for="item in musicList" class="song-item">
                 <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-                <p class="item-title"> {{item.name}}</p>
-                <p class="item-time">3:58</p>
+                <p class="item-title">{{item.name}}</p>
+                <p class="item-artist">{{item.artists[0].name}}</p>
             </li>
         </ul>
 
 
+
     </div>
+
 
     <!-- bottom playing bar -->
     <div class="playing-bar">

@@ -1,6 +1,6 @@
 @import url("../css/reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-body {
+html, body {
   font-family: 'Roboto', sans-serif;
   color: white;
 }
@@ -15,6 +15,8 @@ h1 {
 body {
   background: -webkit-gradient(linear, left top, left bottom, from(#41CCCC), to(#292929));
   background: linear-gradient(180deg, #41CCCC 0%, #292929 100%);
+  min-height: 100vh;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -57,12 +59,41 @@ nav ul li {
   color: white;
 }
 
-nav ul li.nav-search {
-  border: solid 1px white;
+nav ul li.nav-search input {
+  background-color: transparent;
+  background-image: url("../images/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 10px 6px;
+  border: solid 2px white;
   border-radius: 30px;
-  width: 20%;
-  padding: .4em;
-  cursor: text;
+  width: 300px;
+  height: 40px;
+  padding-left: 2.5rem;
+  color: white;
+  font-size: 18px;
+}
+
+nav ul li.nav-search input::-webkit-input-placeholder {
+  color: white;
+}
+
+nav ul li.nav-search input:-ms-input-placeholder {
+  color: white;
+}
+
+nav ul li.nav-search input::-ms-input-placeholder {
+  color: white;
+}
+
+nav ul li.nav-search input::placeholder {
+  color: white;
+}
+
+nav ul li.nav-search input:focus {
+  outline: none;
+  background-color: transparent;
+  color: white;
+  caret-color: white;
 }
 
 nav #logo {
@@ -83,7 +114,6 @@ nav #logo {
   margin: 0 auto;
   width: 100%;
   max-width: 1000px;
-  max-height: 800px;
 }
 
 #artist {
@@ -123,12 +153,18 @@ nav #logo {
           transform: translate(10%, 10%);
 }
 
-.playing .now-playing-cover img:last-child {
-  -webkit-filter: blur(1px);
-          filter: blur(1px);
+ul.song-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 400px;
+  overflow-y: scroll;
+  padding-bottom: 4rem;
 }
 
-.song-item {
+li.song-item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -138,8 +174,23 @@ nav #logo {
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1.5rem;
   width: 40%;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.2);
+  /* glass-small */
+  -webkit-box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(88px);
+          backdrop-filter: blur(88px);
+  border-radius: 18px;
+}
+
+li.song-item p {
+  width: 100%;
+  max-width: 200px;
+  overflow-wrap: break-word;
+  margin-left: 1rem;
 }
 
 .playing-bar {

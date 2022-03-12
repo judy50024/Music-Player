@@ -12,7 +12,10 @@ var app = new Vue({
                 that.musicList = response.data.result.songs;
                 console.log(response);
             }, function(err){})
-        }
+        },
+        // playMusic: function(){
+
+        // }
 
     }
 })
