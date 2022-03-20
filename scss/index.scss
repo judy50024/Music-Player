@@ -163,69 +163,69 @@ nav{
 }
 
 // bottom playing bar
-.playing-bar{
-    border: solid 1px green;
-    width: 100%;
-    height: 94px;
-    position: fixed;
-    bottom: 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+// .playing-bar{
+//     border: solid 1px green;
+//     width: 100%;
+//     height: 94px;
+//     position: fixed;
+//     bottom: 0;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: center;
 
-    background: rgba(255, 255, 255, 0.2);
-    /* glass-small */
-    box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(88px);
+//     background: rgba(255, 255, 255, 0.2);
+//     /* glass-small */
+//     box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
+//     backdrop-filter: blur(88px);
 
-    .playing-bar-widget{
-        // border: solid 1px red;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+//     .playing-bar-widget{
+//         // border: solid 1px red;
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
         
-        &>*{
-            margin: 1rem;
-            cursor: pointer;
-        }
-    }
+//         &>*{
+//             margin: 1rem;
+//             cursor: pointer;
+//         }
+//     }
 
-    .playing-progress{
-        // border: solid 1px black;
-        display: flex;
-        align-items: center;
+//     .playing-progress{
+//         // border: solid 1px black;
+//         display: flex;
+//         align-items: center;
 
-        .line{
-            height: 4px;
-            width: 100%;
-            min-width: 400px;
-            background-color: white;
-        }
+//         .line{
+//             height: 4px;
+//             width: 100%;
+//             min-width: 400px;
+//             background-color: white;
+//         }
 
-        &>*{
-            margin: .5rem;
-        }
+//         &>*{
+//             margin: .5rem;
+//         }
 
-    }
+//     }
 
-    .now-playing{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+//     .now-playing{
+//         display: flex;
+//         justify-content: space-around;
+//         align-items: center;
 
-        &>*{
-            margin: 1rem;
-        }
-    }
+//         &>*{
+//             margin: 1rem;
+//         }
+//     }
 
-}
+// }
 
 audio{
     width: 100%;
     position: fixed;
     bottom: 0;
-    border-radius: 0;
-
+    // border: solid 1px red;
+    
 }
 audio::-webkit-media-controls-panel {
 
@@ -234,3 +234,6 @@ audio::-webkit-media-controls-panel {
     box-shadow: inset 0px 2px 2px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(88px);
   }
+
+
+
