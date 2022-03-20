@@ -34,16 +34,16 @@
     <div class="grid-container">
     
         <div id="artist" class="title">
-            <h1>Glass Animals</h1>
+            <h1>Search your music</h1>
         </div>
 
         <!-- playlist -->
         <ul class="playlist">
             <li v-for="item in musicList" class="song-item">
-                <div class="now-playing-cover">
+                <a class="now-playing-cover" @click="playMusic(item.id)">
                     <img src="./images/icons/play-circle.svg" alt="play-circle">
                     <img class="now-playing-cover" src="./images/cover.png" alt="song-cover">
-                </div>
+                </a>
                 <p class="playing-title">{{item.name}}</p>
                 <p class="playing-time">{{item.artists[0].name}}</p>
             </li>
@@ -52,14 +52,17 @@
     </div>
 
 
-    <!-- bottom playing bar -->
-    <div class="playing-bar">
+        <audio :src="musicUrl"  ref="audio" autoplay loop controls></audio>
 
+
+    <!-- bottom playing bar -->
+    <!-- <div class="playing-bar">
         <div class="playing-bar-widget">
             <img src="./images/icons/skip-back.svg" alt="play-back">
             <img src="./images/icons/play-circle.svg" alt="play-circle">
             <img src="./images/icons/skip-forward.svg" alt="play-forward">
         </div>
+
 
         <div class="playing-progress">
 
@@ -78,7 +81,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 </div>
 
 
