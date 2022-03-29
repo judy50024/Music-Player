@@ -18,6 +18,13 @@ h1{
     margin: 1rem;
 }
 
+h2{
+    font-size: 40px;
+    font-weight: 800;
+    color: $white;
+    margin: 1rem;
+}
+
 // RWD
 $ms_bkpoint: 767.98px; //tablet
 $xs_bkpoint: 374.98px; //mobile
